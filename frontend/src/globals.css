@@ -1,0 +1,29 @@
+:root {
+  --sidebar-bg: #161a1d;
+  --sidebar-hover: #242d35;
+  --sidebar-border: rgba(255, 255, 255, 0.15);
+  --text-primary: #e5e7eb;
+  --text-muted: #9ca3af;
+  --danger: #f87171;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+}
+
+*{
+    line-height: 1.5rem;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.logo,
+.community-header h1,
+.community-card h3,
+.community-chat-header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+

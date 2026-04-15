@@ -1,0 +1,155 @@
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  background-color: #10131a;
+  border-bottom: 1px solid var(--sidebar-border);
+  z-index: 20;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 80px;
+  object-fit: contain;
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.navbar-btn,
+.navbar-user {
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-btn:hover,
+.navbar-user:hover {
+    border: 1px solid #3b82f6;
+
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+  transform: translateY(-1px);
+}
+
+.navbar-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.profile-wrapper {
+  position: relative;
+}
+
+.profile-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 45px;
+
+  width: 200px;
+  background: #1a1d23;
+  border: 1px solid #2d3240;
+  border-radius: 10px;
+
+  padding: 10px;
+  z-index: 999;
+}
+
+.profile-dropdown p {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.logout:hover {
+  
+  background: #2d3240;
+
+}
+
+
+
+.divider {
+  height: 1px;
+  background: #2d3240;
+  margin: 6px 0;
+}
+
+.logout {
+  color: #ef4444;
+}
+
+/* Hamburger Button */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #ececec;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.hamburger-btn:hover {
+  color: #3b82f6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: block;
+  }
+
+  .navbar {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .navbar-logo {
+    height: 60px;
+  }
+
+  .navbar-buttons {
+    gap: 0.5rem;
+  }
+
+  .navbar-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  .btn-text{
+    display: none;
+  }
+  .navbar-logo {
+  height: 45px;
+  object-fit: contain;
+}
+}

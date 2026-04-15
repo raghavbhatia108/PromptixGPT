@@ -1,0 +1,233 @@
+/* ===============================
+   Global Sidebar Theme Variables
+================================ */
+:root {
+  --sidebar-bg: #161a1d;
+  --sidebar-hover: #242d35;
+  --sidebar-border: rgba(255, 255, 255, 0.15);
+  --text-primary: #e5e7eb;
+  --text-muted: #9ca3af;
+  --danger: #f87171;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+}
+
+/* ===============================
+   Sidebar Container
+================================ */
+.sidebar {
+  background-color: var(--sidebar-bg);
+  margin: 1rem;
+  
+  height: 95vh;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--sidebar-border);
+}
+
+/* ===============================
+   Top Section
+================================ */
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* ===============================
+   Logo
+================================ */
+.logo {
+  width: 140px;
+  padding: 1rem;
+}
+
+/* ===============================
+   New Chat Button
+================================ */
+button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--sidebar-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+.main_b{
+  height: 70px;
+  width: 90%;
+  
+
+}
+.main_b:hover{
+   transform: translateY(-2px);
+  border: 1px solid #3b82f6;
+
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+
+button:hover {
+  background-color: var(--sidebar-hover);
+}
+
+/* ===============================
+   History List
+================================ */
+.history {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+  padding: 16px;
+  overflow-y: auto;
+
+}
+
+.history::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===============================
+   History Items (Thread Titles)
+================================ */
+.history li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 25px 14px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: background-color 0.2s ease;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history li:hover {
+  background-color: var(--sidebar-hover);
+  transform: translateY(-2px);
+  border: 1px solid #3b82f6;
+
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+
+.thread-title{
+  overflow: hidden;
+}
+
+/* ===============================
+   Trash Icon
+================================ */
+.fa-trash {
+  opacity: 0;
+
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.history li:hover .fa-trash {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.fa-trash:hover {
+     color: #ef4444;
+
+}
+
+/* ===============================
+   Footer / Signature
+================================ */
+.sign {
+  margin: 16px;
+  padding: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--sidebar-border);
+}
+
+.highlighted {
+    background-color: #242d35;
+    border-radius: var(--radius-md);
+}
+
+.sidebar-btn {
+  width: 90%;
+  margin: 20px auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--sidebar-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+.sidebar-btn:hover{
+   border: 1px solid #3b82f6;
+
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Mobile/Tablet Responsive */
+@media (max-width: 1050px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    width: 280px;
+    height: calc(100vh - 60px);
+    padding: 1rem 0;
+    margin: 0;
+    border-radius: 0;
+    z-index: 10;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Overlay for mobile */
+  .sidebar::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .sidebar {
+    height: 95vh;
+  }
+
+  .logo {
+    display: none;
+  }
+}

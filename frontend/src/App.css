@@ -1,0 +1,96 @@
+* {
+  color: #ececec;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #161a1d;
+}
+body, * {
+  font-family: 'Space Grotesk', 'Roboto', 'Inter', 'Arial', sans-serif;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  height: 100vh;
+  background-color: #10131a;
+  gap: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.main-content {
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+}
+
+.view-content {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background: #10131a;
+  transition: opacity 0.2s ease;
+}
+
+.view-content > * {
+  height: 100%;
+  width: 100%;
+}
+
+.mobile-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .app {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .main-content {
+    padding: 0;
+  }
+
+  .view-content {
+    overflow-y: auto;
+    padding: 0.5rem;
+  }
+
+  .mobile-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    width: 280px;
+    margin: 0;
+    border-radius: 0;
+    z-index: 1000;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+}

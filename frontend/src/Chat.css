@@ -1,0 +1,213 @@
+.chats {
+  font-family: 'roboto', sans-serif;
+  max-width: 1000px;
+  width: 100%;
+  overflow-y: auto;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.chats::-webkit-scrollbar {
+  display: none;          
+}
+
+/* Full-width message row containers */
+.messageRowUser {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.messageRowAssistant {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+/* Message bubble containers */
+.messageBubbleUser {
+  word-break: break-all;
+  max-width: 65%;
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.messageBubbleAssistant {
+  max-width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  line-height: 1.5rem;
+  font-size: 0.95rem;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* User message styling */
+.userMessage {
+  background-color: #161a1d;
+  border: 1px solid #2a2f38;
+  padding: 12px 16px;
+  border-radius: 14px;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  word-wrap: break-word;
+  font-family: 'Roboto', sans-serif !important;
+  text-align: right;
+}
+
+/* Assistant message styling (for ReactMarkdown wrapper) */
+.messageBubbleAssistant > div,
+.messageBubbleAssistant > p,
+.messageBubbleAssistant *,
+.userMessage * {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.messageBubbleAssistant > div,
+.messageBubbleAssistant > p {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* List alignment in AI responses */
+.messageBubbleAssistant ul,
+.messageBubbleAssistant ol {
+  margin: 0.75rem 0 0.75rem 1.25rem !important;
+  padding-left: 1rem !important;
+  list-style-position: outside !important;
+  color: #e5e7eb;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.messageBubbleAssistant li {
+  
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* Code blocks and headings in responses */
+.messageBubbleAssistant h1,
+.messageBubbleAssistant h2,
+.messageBubbleAssistant h3,
+.messageBubbleAssistant h4,
+.messageBubbleAssistant h5,
+.messageBubbleAssistant h6,
+.messageBubbleAssistant code,
+.messageBubbleAssistant pre {
+  font-family: 'Roboto', sans-serif !important;
+  color: #e5e7eb;
+}
+
+.messageBubbleAssistant {
+  font-size: 0.95rem;
+}
+
+.gptDiv {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 0.9rem;
+}
+
+.userDiv {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+}
+
+.hljs {
+  border-radius: 8px;
+  padding: 1rem !important;
+  background-color: #0f0f10 !important;
+  margin: 0.5rem 0 !important;
+}
+
+.messageBubbleAssistant hr,
+.messageBubbleUser hr {
+  border: none;
+  border-top: 1px solid #2a2f38;
+  margin: 1rem 0;
+  width: 100%;
+  height: 1px;
+  background: #2a2f38;
+}
+
+.messageBubbleAssistant hr + * {
+  margin-top: 0.8rem;
+}
+
+.messageBubbleAssistant h3 {
+  margin-top: 0.75rem;
+}
+
+.empty-state {
+  height: 100%; /* or 100vh depending on parent */
+  display: flex;
+  gap: 1rem;
+  justify-content: center;  /* horizontal */
+  align-items: center;      /* vertical */
+  flex-direction: column;
+  text-align: center;
+}
+.feature-cards {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 220px;
+  padding: 18px;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #2d3240;
+
+  transition: all 0.25s ease;
+
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #3b82f6;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.loader-container {
+  height: 100%; /* important */
+  display: flex;
+  justify-content: center;  /* horizontal */
+  align-items: center;      /* vertical */
+  padding-bottom: 3rem;
+}
+.messageBubbleAssistant {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,80 @@
+.community {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #10131a;
+  color: white;
+  overflow-y: auto;
+  transition: opacity 0.2s ease;
+}
+
+.community-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.2rem;
+}
+
+.community-header {
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.community-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+}
+
+.community-header p {
+  margin: 0;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.community-card {
+   background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #2d3240;
+
+  transition: all 0.25s ease;
+
+  border-radius: 8px;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.community-card:hover {
+ transform: translateY(-5px);
+  border-color: #3b82f6;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+
+.community-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.community-card p {
+  margin: 0 0 0.5rem 0;
+  color: #ccc;
+}
+
+.community-card small {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.no-chats {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: #ccc;
+}

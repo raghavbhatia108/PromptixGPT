@@ -1,0 +1,38 @@
+.about-container {
+  padding: 40px;
+  margin: 0 auto;
+  color: white;
+  overflow-y: auto;
+}
+
+.about-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.about-subtitle {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 30px;
+}
+
+.about-section {
+  margin-bottom: 25px;
+  padding: 20px;
+  border: 1px solid #2d3240;
+  border-radius: 10px;
+  background: #1a1d23;
+}
+
+.about-section h2 {
+  margin-bottom: 10px;
+}
+
+.about-section ul {
+  padding-left: 20px;
+}
+
+.about-section li {
+  margin-bottom: 6px;
+}
