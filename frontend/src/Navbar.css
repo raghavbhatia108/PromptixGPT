@@ -106,6 +106,19 @@
   color: #ef4444;
 }
 
+.user-name,
+.user-email {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.user-email {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
 /* Hamburger Button */
 .hamburger-btn {
   display: none;
