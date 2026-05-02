@@ -1,4 +1,5 @@
 import "./Navbar.css";
+import logoText from "./assets/logo_text.png";
 import { useContext, useState } from "react";
 import { MyContext } from "./MyContext.jsx";
 import toast from "react-hot-toast";
@@ -79,7 +80,7 @@ function Navbar({ setToken, sidebarOpen, setSidebarOpen }) {
           <i className="fa-solid fa-bars"></i>
         </button>
         <img
-          src="/src/assets/logo_text.png"
+          src={logoText}
           alt="PromptixGPT"
           className="navbar-logo"
         />

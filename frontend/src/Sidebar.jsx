@@ -1,4 +1,5 @@
 import "./Sidebar.css";
+import logoIcon from "./assets/logo_icon.png";
 import { MyContext } from "./MyContext";
 import { useContext, useEffect } from "react";
 import { v1 as uuidv1 } from "uuid";
@@ -93,7 +94,7 @@ function Sidebar({ isOpen }) {
       {/* 🔝 TOP */}
       <div className="top">
         <img
-          src="/src/assets/logo_icon.png"
+          src={logoIcon}
           alt=""
           width="200px"
           className="logo"

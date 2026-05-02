@@ -8,7 +8,8 @@ import {
   Lock,
   User,
 } from "lucide-react";
-import "./Auth.css"; // Imported custom CSS here
+import "./Auth.css";
+import logoBanner from "./assets/PromptixGPT_transparentb.png";
 import toast from "react-hot-toast";
 
 // --- Custom Typewriter Hook ---
@@ -152,7 +153,7 @@ function Auth({ setToken }) {
       {/* --- Navbar --- */}
       <nav className="navbar-l">
         <div className="logo-container">
-          <img src="/src/assets/PromptixGPT_transparentb.png" alt="" />
+          <img src={logoBanner} alt="" />
         </div>
 
         <div className="nav-actions">
