@@ -8,7 +8,7 @@ import CommunityChat from "./CommunityChat.jsx";
 import { MyContext } from "./MyContext.jsx";
 import { v1 as uuidv1 } from "uuid";
 import { Toaster } from "react-hot-toast";
-import Auth from "./auth.jsx";
+import Auth from "./Auth.jsx";
 import About from "./About.jsx";
 import Dashboard from "./Dashboard.jsx";
 
