@@ -1,6 +1,6 @@
 import express from 'express';
 import Thread from '../models/thread.js';
-import SharedChat from '../models/SharedChat.js';
+import SharedChat from '../models/sharedChat.js';
 
 const router = express.Router();
 
