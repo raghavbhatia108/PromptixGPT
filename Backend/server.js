@@ -17,11 +17,6 @@ app.use(cors({
   credentials: true
 }));
 
-app.options("*", cors({
-  origin: "https://promptix-gpt-4eoi.vercel.app",
-  credentials: true
-}));
-
 app.use((req, res, next) => {
   console.log(`[Backend Request] ${req.method} ${req.originalUrl}`);
   next();
