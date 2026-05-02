@@ -11,9 +11,10 @@ const app =express();
 const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
+
 const allowedOrigins = [
   "http://localhost:5173",
-  process.env.FRONTEND_URL
+  "https://promptix-gpt-4eoi.vercel.app"
 ];
 
 app.use(cors({
@@ -21,12 +22,13 @@ app.use(cors({
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error("Not allowed by CORS"));
+      callback(new Error("CORS not allowed"));
     }
   },
   credentials: true
 }));
 
+app.options("*", cors());
 
 app.use((req, res, next) => {
   console.log(`[Backend Request] ${req.method} ${req.originalUrl}`);
