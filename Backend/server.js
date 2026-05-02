@@ -37,6 +37,8 @@ const connectDB = async() =>{
     }
 }
 
+app.get('/health', (req, res) => res.json({ status: 'ok' }));
+
 app.use('/api', chatRoutes);
 app.use('/api/community', communityRoutes);
 app.use('/api/auth', authRoutes);
